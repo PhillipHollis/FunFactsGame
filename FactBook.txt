@@ -1,0 +1,30 @@
+package com.test.mathgamechapter2;
+
+import java.util.Random;
+
+public class FactBook {
+    // Fields (member variables) - Properties about the object
+    private String[] mFacts = {
+            "1+1=2",
+            "Water is wet",
+            "The sun is hot",
+            "The sky is blue",
+            "2=2+4",
+            "Gold is a metal",
+            "Night time is dark",
+            "Laptops are portable",
+            "Candy is sweet",
+            "This is an APP"};
+    // methods - Actions the oblect can take
+    public String getFact() {
+        String fact = "";
+        // Randomly select a fact
+        Random randomGenerator = new Random();
+        int randomNumber = randomGenerator.nextInt(mFacts.length);
+        fact = mFacts[randomNumber];
+
+        return fact;
+    }
+
+
+}
